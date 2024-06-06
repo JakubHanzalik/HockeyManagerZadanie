@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HockeyManager.Application", "HockeyManagerZadanie\HockeyManager.Application.csproj", "{0A88255A-AC1F-4276-A0C8-7D8E8987E4AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HockeyManager.Application", "HockeyManager.Application\HockeyManager.Application.csproj", "{0A88255A-AC1F-4276-A0C8-7D8E8987E4AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HockeyManager.Db", "HockeyManager.Db\HockeyManager.Db.csproj", "{12187E3E-3D37-4EEF-8A9A-E0957875C45B}"
 EndProject
