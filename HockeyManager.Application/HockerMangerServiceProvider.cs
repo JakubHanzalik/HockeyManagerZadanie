@@ -15,6 +15,6 @@ namespace HockeyManager.Application
             var services = new ServiceCollection();
             services.AddSingleton<IPlayersResouce, PlayersResource>();
             return services.BuildServiceProvider();
-        }}
+        }
     }
 }

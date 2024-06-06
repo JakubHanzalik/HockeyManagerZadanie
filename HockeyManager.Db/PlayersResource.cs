@@ -16,9 +16,9 @@ namespace HockeyManager.Db
 
             Players = new List<Player>() {
         new Player() {
-            Meno = "Jozef",
-              Priezvisko = "Mrkvicka",
-              DatumNarodenia = new DateOnly(1990, 1, 1),
+            Name = "Jozef",
+              Surname = "Mrkvicka",
+              BirthDate = new DateOnly(1990, 1, 1),
               Roles = new List < IPlayerRole > () {
                 new ForwardRole() {
                     Goals = 10
@@ -29,9 +29,9 @@ namespace HockeyManager.Db
               }
           },
           new Player() {
-            Meno = "Peter",
-              Priezvisko = "Hruska",
-              DatumNarodenia = new DateOnly(1995, 1, 1),
+            Name = "Peter",
+              Surname = "Hruska",
+              BirthDate = new DateOnly(1995, 1, 1),
               Roles = new List < IPlayerRole > () {
                 new ForwardRole() {
                     Goals = 15

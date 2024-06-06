@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HockeyManager.Application;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace HockeyManagerZadanie
 {
@@ -6,9 +8,10 @@ namespace HockeyManagerZadanie
     {
         static void Main(string[] args)
         {
-            // TODO: Implement your code here
+            /*var services = HockerMangerServiceProvider.CreateServices();
 
-            Console.WriteLine("Hello, world!");
+            Application app = services.GetRequiredService<Hock>();
+            app.MyLogic();*/
         }
     }
 }
