@@ -1,17 +1,26 @@
-﻿using HockeyManager.Application;
+﻿using HockerManager.Core.Handlers.Player.AddNewDefender;
+using HockeyManager.Application;
+using HockeyManager.Db;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Reflection;
 
-namespace HockeyManagerZadanie
+namespace HockeyManager.Application
 {
     class Program
     {
         static void Main(string[] args)
         {
-            /*var services = HockerMangerServiceProvider.CreateServices();
+            var serviceProvider = new ServiceCollection()
+                .AddMediatR(cfg =>
+                {
+                    cfg.RegisterServicesFromAssemblies(new Assembly[] { Assembly.GetExecutingAssembly(), typeof(AddNewDefenderHandler).Assembly });
+                })
+                .AddSingleton<HockeyManager>()
+                .AddSingleton<IPlayersResouce, PlayersResource>()
+                .BuildServiceProvider();
 
-            Application app = services.GetRequiredService<Hock>();
-            app.MyLogic();*/
+            serviceProvider.GetService<HockeyManager>()?.PrintNameAndAgeOfTheYoungestPlayer();
         }
     }
 }

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HockerManager.Core.Handlers.Player.GetYoungestPlayerFullName
+namespace HockerManager.Core.Handlers.Player.GetYoungestPlayerFullNameAndAge
 {
-    public class GetYoungestPlayerFullNameResponse
+    public class GetYoungestPlayerFullNameAndAgeResponse
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+        public int Age { get; set; }
     }
 }

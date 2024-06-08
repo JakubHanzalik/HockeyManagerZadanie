@@ -1,9 +1,10 @@
 ﻿using HockeyManager.Db;
 using HockeyManager.Db.Entities.Roles;
+using MediatR;
 
 namespace HockerManager.Core.Handlers.Player.AddNewGoalie
 {
-    public class AddNewGoalieHandler
+    public class AddNewGoalieHandler : IRequestHandler<AddNewGoalieRequest>
     {
         private readonly IPlayersResouce playersResource;
 
@@ -12,7 +13,7 @@ namespace HockerManager.Core.Handlers.Player.AddNewGoalie
             playersResource = _playersResource;
         }
 
-        public void Handle(AddNewGoalieRequest request)
+        public async Task Handle(AddNewGoalieRequest request, CancellationToken cancellationToken)
         {
             this.playersResource.AddPlayer(new HockeyManager.Db.Entities.Players.Player()
             {
@@ -25,6 +26,8 @@ namespace HockerManager.Core.Handlers.Player.AddNewGoalie
                     }
                 }
             });
+
+            await Task.CompletedTask;
         }
     }
 }
