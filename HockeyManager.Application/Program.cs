@@ -26,7 +26,11 @@ namespace HockeyManager.Application
                 .AddSingleton<IPlayersResouce, PlayersResource>()
                 .BuildServiceProvider();
 
-            serviceProvider.GetService<HockeyManager>()?.PrintNameAndAgeOfTheYoungestPlayer();
+            // Testing code
+            //serviceProvider.GetService<HockeyManager>()?.AddNewForward();
+            //serviceProvider.GetService<HockeyManager>()?.AddNewDefender();
+            //serviceProvider.GetService<HockeyManager>()?.AddNewGoalie();
+            //serviceProvider.GetService<HockeyManager>()?.PrintNameAndAgeOfTheYoungestPlayer();
         }
     }
 }
