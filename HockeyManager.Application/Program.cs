@@ -1,9 +1,9 @@
-﻿using HockerManager.Core.Handlers.Player.AddNewDefender;
+﻿using System;
+using System.Reflection;
+using HockerManager.Core.Handlers.Player.AddNewDefender;
 using HockeyManager.Application;
 using HockeyManager.Db;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Reflection;
 
 namespace HockeyManager.Application
 {
@@ -14,7 +14,13 @@ namespace HockeyManager.Application
             var serviceProvider = new ServiceCollection()
                 .AddMediatR(cfg =>
                 {
-                    cfg.RegisterServicesFromAssemblies(new Assembly[] { Assembly.GetExecutingAssembly(), typeof(AddNewDefenderHandler).Assembly });
+                    cfg.RegisterServicesFromAssemblies(
+                        new Assembly[]
+                        {
+                            Assembly.GetExecutingAssembly(),
+                            typeof(AddNewDefenderHandler).Assembly
+                        }
+                    );
                 })
                 .AddSingleton<HockeyManager>()
                 .AddSingleton<IPlayersResouce, PlayersResource>()
