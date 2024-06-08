@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using HockerManager.Core.Handlers.Player.AddNewDefender;
+﻿using HockerManager.Core.Handlers.Player.AddNewDefender;
 using HockerManager.Core.Handlers.Player.AddNewForward;
 using HockerManager.Core.Handlers.Player.AddNewGoalie;
 using HockerManager.Core.Handlers.Player.GetYoungestPlayerFullNameAndAge;

@@ -1,5 +1,4 @@
-﻿using System.Net.NetworkInformation;
-using HockeyManager.Db;
+﻿using HockeyManager.Db;
 using HockeyManager.Db.Entities.Roles;
 using MediatR;
 
